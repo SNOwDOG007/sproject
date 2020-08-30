@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+   {% load static %}
    <head>
       <title>Oblige Society & People Category Bootstrap Responsive web Template| Home :: w3layouts</title>
       <!--meta tags -->
@@ -30,5 +31,63 @@
       <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
    </head>
    <body>
+      <!--header-->
+      <div class="main-top" id="home">
+         <!-- header -->
+         <div class="headder-top">
+            {% block header %}
+            {% endblock header %}
+         </div>
+         <!-- //header -->
+         <!-- banner -->
+         <div class="main-banner">
+            {% block banner %}
+            {% endblock banner %}
+         </div>
+         <!-- //banner -->
+      </div>
+      <!--//header-->
+
+      <!--donation-->
+      <section class="three-grids">
+         {% block donation %}
+         {% endblock donation %}
+      </section>
+      <!--//donation-->
+
+      <!--about-->
+      <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
+        {% block about %}
+        {% endblock about %}
+      </section>
+      <!--//about-->
+
+      <!--state -->
+      <section class="stats py-lg-4 py-md-3 py-sm-3 py-3">
+        {% block state %}
+        {% endblock state %}
+      </section>
+      <!--//state -->
+
+      <!-- service -->
+      <section class="service py-lg-4 py-md-3 py-sm-3 py-3" id="service">
+        {% block service %}
+        {% endblock service %}
+      </section>
+      <!--//service -->
+
+      <!--team -->
+      <section class="team py-lg-4 py-md-3 py-sm-3 py-3" id="team">
+        {% block team %}
+        {% endblock team %}
+      </section>
+      <!--//team -->
+
+      <!-- gallery-main -->
+      <section class="gallery py-lg-4 py-md-3 py-sm-3 py-3" id="gallery">
+        {% block gallery %}
+        {% endblock gallery %}
+      </section>
+      <!--// gallery-main -->
    </body>
 </html>
