@@ -509,8 +509,8 @@ background-color: #212121;
 }
 
 .headder-top {
-    background: transparent;
-    position: absolute;
+    background:rgba(0, 0, 0, 0.3);
+    position: fixed;
     width: 100%;
     padding: 1em 1em;
 }

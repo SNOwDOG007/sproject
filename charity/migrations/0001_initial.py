@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=255)),
                 ('content', models.TextField()),
-                ('count', models.IntegerField(default=0)),
+                # ('count', models.IntegerField(default=0)),
                 ('cover_image', models.ImageField(null=True, upload_to='charity')),
             ],
         ),
