@@ -509,10 +509,11 @@ background-color: #212121;
 }
 
 .headder-top {
-    background:rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
     position: fixed;
     width: 100%;
     padding: 1em 1em;
+    z-index: 1;
 }
 
 .style-banner {
@@ -591,6 +592,7 @@ background-color: #212121;
 .view-price a:hover {
     opacity:1;
     transition: 0.5s all;
+    transform: scale(1.1);
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
