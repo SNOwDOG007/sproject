@@ -750,6 +750,10 @@ background-color: #212121;
     color: #ffffff;
 }
 
+#see_more :hover{
+    transform: scale(1.5);
+}
+
 /* popup */
 
 .popup-effect {
