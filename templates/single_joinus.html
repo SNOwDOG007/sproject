@@ -14,8 +14,13 @@
         
         function hideURLbar() {
             window.scrollTo(0, 1);
-        }
+        }        
         </script>
+        {% if status %}
+        <script>
+            alert("{{status}}");
+        </script>        
+        {% endif %}
         <!--//meta tags ends here-->
         <!--booststrap-->
         <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -25,6 +30,7 @@
         <!-- //font-awesome icons -->
         <!--stylesheets-->
         <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
+        <link href="../static/css/form_style.css" rel='stylesheet' type='text/css' media="all">
         <!--//stylesheets-->
         <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
         <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
@@ -80,20 +86,60 @@
                  </div>              
             </div>
             <!-- //header -->
+
             <!-- banner -->
             <div class="main-banner">
                 <div class="container">
-                    <div class="style-banner ">
-                       <h4 class="mb-1">Better Care and Better World</h4>
-                       <h5>You have a good life,some other don't
-                       </h5>
-                    </div>
-                    <div class="two-demo-button mt-lg-4 mt-3">
-                       <p> This is single joinus. </p>
+                    <div class="form-banner ">
+                       <h4 class="mb-1">Join Hands For a Better World</h4>
+                       <h5>You have a good life,some other don't</h5>
                     </div>
                 </div>
             </div>
             <!-- //banner -->
+
+            <!-- Form -->
+            <div class="formv">
+                <div class="form-container">
+                    <div class="style-form">
+                        <form action="" method="post">
+                            {% csrf_token  %}
+                            <div class=" form-group contact-forms">
+                                <input type="text" class="form-control" placeholder="Position" name="position" required="">
+                             </div>
+                           <div class=" form-group contact-forms">
+                              <input type="text" class="form-control" placeholder="Name" name="name" required="">
+                           </div>
+                           <div class=" form-group contact-forms">
+                              <input type="text" class="form-control" placeholder="Address" name="address" required="">
+                           </div>
+                           <div class="form-group contact-forms">
+                                <ul class="form-gender">
+                                    <li>
+                                        <input type="radio" value="Male" class="form-gender1" name="genders" required=""> Male
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="Female" class="form-gender2" name="genders" required=""> Female
+                                    </li>
+                                    <li>
+                                        <input type="radio" value="Transgender" class="form-gender3" name="genders" required=""> Transgender
+                                    </li>                                
+                                </ul>                                                        
+                           </div>
+                           <div class="form-group contact-forms">
+                              <input type="email" class="form-control" placeholder="Email" name="email" required="">
+                           </div>
+                           <div class=" form-group contact-forms">
+                              <input type="text" class="form-control" placeholder="Contact" name="contact" required="">
+                           </div>
+                           <button type="submit" class="btn sent-butnn">Submit</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //Form -->
+
         </div>
         <!--//header-->
 

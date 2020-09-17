@@ -3,25 +3,38 @@ from charity.models import Blog, Gallery, Volunteer, State
 
 # Register your models here.
 # @admin.register(Blog)
-class CharityAdmin(admin.ModelAdmin):
-    #BLOG 
-    list_display = ("title", "author", "created_at")
-    prepopulated_fields = {"slug": ("title",)}
+
+#django admin title/headeer
+admin.site.index_title = "Charity"
+admin.site.site_title = " Summer Project"
+admin.site.site_header="Charity | Summer Project- Admin Panel"
+
+#Blog
+class BlogAdmin(admin.ModelAdmin):
+    list_display = ["id", "title", "author", "created_at", "edited_by", "updated_at"]
+    search_fields = ["title", "author"]
+    list_filter = ["author", "created_at"]
+    # prepopulated_fields = {"slug": ("title",)}
     # readonly_fields = ("author",)
 
-    #GALLERY
-    list_display = ("image", "title")
-    prepopulated_fields = {"slug": ("title",)}
+# Gallery
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ["image", "title"]
+    # prepopulated_fields = {"slug": ("title",)}
 
-    #VOLUNTEER
-    list_display = ("position", "name", "address", "email", "contact")
-    prepopulated_fields = {"slug": ("title",)}
+# Volunteer
+class VolunteerAdmin(admin.ModelAdmin):
+    list_display = ["id", "name", "position", "address", "gender", "email", "contact", "joined_from"]
+    search_fields = ["name", "address", "contact"]
+    list_filter = ["joined_from"]
+    # list_editable = ["address"]
 
-    #STATE
-    list_display = ("donation", "volunteers", "rescued")
-    prepopulated_fields = {"slug": ("title",)}
+#STATE
+class StateAdmin(admin.ModelAdmin):
+    list_display = ["donation", "volunteers", "rescued"]
 
-admin.site.register(Blog)
-admin.site.register(Gallery)
-admin.site.register(Volunteer)
-admin.site.register(State)
+
+admin.site.register(Blog, BlogAdmin)
+admin.site.register(Gallery, GalleryAdmin)
+admin.site.register(Volunteer, VolunteerAdmin)
+admin.site.register(State, StateAdmin)

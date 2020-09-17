@@ -1,0 +1,59 @@
+.div {
+    display: block;
+}
+
+.main-banner {
+    padding-top: 175px;
+}
+
+.container {
+    max-width: 1020px;
+}
+
+.form-banner {
+    text-align: center;
+    color: #ffffff;
+}
+
+.formv {
+    display: flex;
+    padding-bottom: 75px;
+}
+
+.form-container {
+
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 450px;
+}
+
+.style-form {    
+    padding-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-gender {
+    display: block;
+    background-color: #ffffff;
+    color: #000000;
+    height: 43.2px;
+    padding: .8em .7em;
+    border-left: 2px solid #00b381;
+}
+
+.form-gender li {
+    position: flex;
+    font-size: 14px;
+    padding-right: 52px;
+}
+
+/* Create a custom radio button */
+.form-gender1, .form-gender2, .form-gender3 {
+    height: auto;
+    width: auto;
+}
+
