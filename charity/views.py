@@ -10,7 +10,7 @@ def SingleJoinusView(request):
         post = request.POST["position"]
         uname = request.POST["name"]
         add = request.POST["address"]
-        gen = request.POST["genders"]
+        gen = request.POST["gender"]
         mail = request.POST["email"]
         contact = request.POST["contact"]
 

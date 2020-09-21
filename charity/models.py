@@ -40,7 +40,7 @@ class Volunteer(models.Model):
     position = models.CharField(max_length=75)
     name = models.CharField(max_length=255)    
     address = models.CharField(max_length=100, null=True)
-    gender = models.CharField(max_length=15, choices=g, null=True)
+    gender = models.CharField(max_length=12, choices=g, null=True)
     email = models.CharField(max_length=100, null=True)
     phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     contact = models.CharField(validators=[phone_regex], max_length=10, null=True)

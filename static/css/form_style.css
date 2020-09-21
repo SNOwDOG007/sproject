@@ -21,7 +21,6 @@
 }
 
 .form-container {
-
     position: relative;
     padding-right: 15px;
     padding-left: 15px;
@@ -48,7 +47,8 @@
 .form-gender li {
     position: flex;
     font-size: 14px;
-    padding-right: 52px;
+    padding-right: 49px;
+    text-align: center;
 }
 
 /* Create a custom radio button */
