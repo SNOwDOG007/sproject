@@ -26,12 +26,12 @@ class GalleryAdmin(admin.ModelAdmin):
 class VolunteerAdmin(admin.ModelAdmin):
     list_display = ["id", "name", "position", "address", "gender", "email", "contact", "joined_from"]
     search_fields = ["name", "address", "contact"]
-    list_filter = ["joined_from"]
+    list_filter = ["joined_from", "gender"]
     # list_editable = ["address"]
 
 #STATE
 class StateAdmin(admin.ModelAdmin):
-    list_display = ["donation", "volunteers", "rescued"]
+    list_display = ["id", "donation", "volunteers", "rescued"]
 
 
 admin.site.register(Blog, BlogAdmin)
