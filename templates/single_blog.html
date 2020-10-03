@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
     <head>
-    <title>खुशीको श्रीजना | Creation of happiness, Charity</title>
+    <title>खुशीको श्रीजना | Creation of happiness - Charity</title>
         <!--meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,8 +54,8 @@
                            <ul>
                               <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
                               <li><a href="#" class="drop-text">Donation</a></li>
-                              <li><a href="#" class="drop-text">Volunteer</a></li>
-                              <li><a href="#" class="drop-text">Human Rights</a></li>
+                              <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
+                              <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
                               <li><a href="#" class="drop-text">Sponsor</a></li>
                            </ul>
                           </li>
@@ -85,7 +85,11 @@
                 <div class="container">
                     <div class="style-banner ">
                        <h4 class="mb-1">Better Care and Better World</h4>
-                       <h5>You have a good life,some other don't
+                       <h5>You have a good life,some other don't        {% for i in blog %}   
+                        {{i.title}} 
+                        {{i.author}}
+                        {{i.content}}
+                        {% endfor %}
                        </h5>
                     </div>
                     <div class="two-demo-button mt-lg-4 mt-3">
@@ -96,10 +100,9 @@
             <!-- //banner -->
         </div>
         <!--//header-->
-
         <!-- Location -->
         <div class="address_mail_footer_grids">
-            <iframe src="https://maps.google.com/maps?q=sainik%20awasiya&t=k&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            <iframe src="https://maps.google.com/maps?q=orchid%20international%20college&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
         </div>
         <!-- //Location -->
 

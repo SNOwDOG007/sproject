@@ -869,6 +869,10 @@ background-color: #212121;
     background: url(../images/bb1.jpg)no-repeat 0px 0px;
 }
 
+.more:hover {
+    transform: scale(1.5);
+}
+
 .busness-tip-two {
     background: url(../images/bb2.jpg)no-repeat 0px 0px;
 }

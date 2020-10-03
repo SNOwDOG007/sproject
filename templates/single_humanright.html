@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+    <title>खुशीको श्रीजना | Creation of happiness - Charity</title>
+        <!--meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Oblige Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+        <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+        
+            if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more"; 
+            moreText.style.display = "none";
+            } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less"; 
+            moreText.style.display = "inline";
+            }
+        }
+        </script>
+        <!--//meta tags ends here-->
+        <!--booststrap-->
+        <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+        <!--//booststrap end-->
+        <!-- font-awesome icons -->
+        <link href="../static/css/font-awesome.min.css" rel="stylesheet">
+        <!-- //font-awesome icons -->
+        <!--stylesheets-->
+        <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
+        <link href="../static/css/humanright.css" rel='stylesheet' type='text/css' media="all">
+        <!--//stylesheets-->
+        <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
+        <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+    </head>
+    <body>
+        <!--header-->
+        <div class="main-top" id="home">
+            <!-- header -->
+            <div class="headder-top">
+                <div class="container-fluid">
+                    <!-- nav -->
+                    <nav >
+                       <div id="logo">
+                          <h1><a class="title" href="{% url 'home' %}">खुशीको श्रीजना<span id="tagline">Creation of happiness, Charity</span></a></h1>
+                       </div>
+                       <label for="drop" class="toggle">Menu</label>
+                       <input type="checkbox" id="drop">
+                       <ul class="menu mt-2">
+                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'home' %}">Home</a></li>
+                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1"><a href="{% url 'single_about' %}">About</a></li>
+                          <!-- Service -->
+                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                              <!-- First Tier Drop Down -->
+                             <a href="#">Services <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                             <input type="checkbox" id="drop-2">
+                             <ul>
+                                <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
+                                <li><a href="#" class="drop-text">Donation</a></li>
+                                <li><a href="{% url 'single_joinus' %}" class="drop-text">Volunteer</a></li>
+                                <li><a href="{% url 'single_humanright' %}" class="drop-text">Human Rights</a></li>
+                                <li><a href="#" class="drop-text">Sponsor</a></li>
+                             </ul>
+                          </li>
+                          <!-- //Service -->
+                          <!-- More -->
+                          <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                             <!-- First Tier Drop Down -->
+                             <a href="#">More <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                             <input type="checkbox" id="drop-2">
+                             <ul>
+                                <!-- <li><a href="#team" class="drop-text">Founders</a></li> -->
+                                <li><a href="{% url 'single_gallery' %}" class="drop-text">Gallery</a></li>
+                                <li><a href="{% url 'single_blog' %}" class="drop-text">Blog</a></li>
+                             </ul>
+                          </li>
+                          <!-- //More -->
+                          <li><a href="#contactus">Contact Us</a></li>
+                          <li><a href="{% url 'single_joinus' %}">Join Us</a></li>
+                       </ul>
+                    </nav>
+                    <!-- //nav -->
+                 </div>              
+            </div>
+            <!-- Human-Rights -->
+            <div class="main-banner">
+                <div class="container">
+                    <div class="style-banner ">
+                        <h4 class="mb-1"> National Human Rights Commission - Nepal</h4>
+                        <p class="tagline">Dignity, Equality & Justice for All</p>
+                        <p>
+                            The National Human Rights Commission, established as an independent statutory body in 2000, has now been elevated to a powerful constitutional 
+                            body with a commensurate mandate, competence and independence. The NHRCN was elevated to a constitutional body by the Article 131 of the Interim 
+                            Constitution of Nepal, 2007 and by Article 248 of the present Constitution of Nepal (2015). NHRC Nepal has a separate sphere of responsibilities 
+                            as mandated in the Constitution of Nepal. These responsibilities complement the normal machinery of the Supreme Court, Office of the Attorney 
+                            General, and other existing judicial and quasi-judicial bodies of Nepal. NHRCN submits its annual report of its functioning to the President, and 
+                            the President causes that report to be laid through the Prime Minister before the Federal Parliament. The NHRCN motto, <em>‘Human rights for all, 
+                            at every household: basis of peace and development’</em> has set a new goal to take human rights consciousness in every household.
+                        </p><span id="dots"></span><span id="more">
+                        <p>&nbsp;</p>
+                        <p>
+                            The NHRCN was created in response to 1991 UN-sponsored meeting of the representatives of national institutions held in Paris. The meeting laid 
+                            down Paris Principles, a detailed set of principles on the status of national institutions. These principles, subsequently endorsed by the UN 
+                            Commission on Human Rights (Resolution 1992/54 of 3 March 1992) and the UN General Assembly (Resolution 48/134 of 20 December 1993) have become 
+                            the foundation and reference point for the establishment and operation of the National Human Rights Commission of Nepal as well. The Commission 
+                            is fully compliant with the principles relating to the status of national institutions for the promotion and protection of human rights (Paris 
+                            Principles) and has been accredited with “A” status by the Global Alliance of National Human Rights Institutions. This status of the Commission 
+                            and an embodiment of Nepal's concern for the promotion, protection and respect of human rights paved way to Nepal to be elected as a member of 
+                            United Nations Human Rights Council.
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>
+                            The Paris Principle stresses that the composition of the national institution and the appointment of its members, whether by means of an election 
+                            or otherwise, shall be established in accordance with a procedure which affords all necessary guarantees to ensure the pluralist representation of 
+                            the social forces (of civilian society) involved in the promotion and protection of human rights.
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>
+                            Article 248 and 292 of Constitution of Nepal Provides that members of the Constitutional Bodies (including the NHRCN) are appointed on the 
+                            recommendation of the Constitutional Council pursuant to Parliamentary hearing conducted for their appointments.
+                        </p>
+                        <p>
+                            The selection and appointment process is as follows:
+                        </p>
+                        <ul id="ul">
+                            <li>
+                                The Constitutional Council proposes the candidates on the basis of prerequisite as specified in the article 248 clause 6 (a) to (f) that details 
+                                the minimum qualification and experience. Article 248 (6) provides a person shall be eligible to be appointed as the Chairperson or a member of 
+                                the National Human Rights Commission if he or she possesses the following qualification:
+                            </li>
+                        </ul>
+                        <ol id="ol">
+                            <li>
+                                The Chairperson of NHRCN if he/she:
+                            </li>
+                            <li>
+                                is a retired Chief Justice or retired Judge of the Supreme Court
+                            </li>
+                            <li>
+                                having rendered outstanding contribution to the protection and promotion of human rights or
+                            </li>
+                            <li>
+                                being a renowned person having been active for at least twenty years in and rendered outstanding contribution to the protection and promotion of 
+                                human rights or to various fields of national life,
+                            </li>
+                        </ol>
+                        <ul id="ul">
+                            <li>
+                                a member of NHRCN, if he or she:
+                            </li>
+                        </ul>
+                        <ol id="ol">
+                            <li>
+                                is a person being involved in the field of the protection and promotion of human rights or rights and interests of the child or
+                            </li>
+                            <li>
+                                is a renowned person having been active for at least twenty years in and rendered outstanding contribution to various fields of national life,
+                            </li>
+                            <li>
+                                holding a bachelor&#39;s degree from a recognized university,
+                            </li>
+                            <li>
+                                having attained the age of forty five years,
+                            </li>
+                            <li>
+                                not being a member of any political party at the time of appointment,
+                            </li>
+                            <li>
+                                being of high moral character.
+                            </li>
+                        </ol>
+                        <p>&nbsp;</p>
+                        <p>
+                            The Constitution has laid down the high qualifications that the members are required to have, to be eligible to be appointed to the Commission. Article 
+                            248 of the Constitution of Nepal, has provisioned the following:
+                        </p>
+                        <ol id="ol">
+                            <li>
+                                National Human Rights Commission, Nepal, consists of a Chairperson and four full time remunerated members.
+                            </li>
+                            <li>
+                                The President on the recommendation of the Constitutional Council appoints the Chairperson and members.
+                            </li>
+                            <li>
+                                The term of the office of the Chairperson and members of the NHRCN is six years from the date of appointment.
+                            </li>
+                            <li>
+                                The Chairperson and members appointed are not eligible for reappointment.
+                            </li>
+                        </ol>
+                        <p>&nbsp;</p>
+                        <p>
+                            The Commission is mandated to ensure the respect, promotion and protection of human rights, is competent to launch inquiries and investigations into alleged 
+                            human rights violations, and can recommend legal or departmental action against human rights violators. The establishment of the Commission complies with the 
+                            standards set out in the Paris Principles. To name a few, independence is guaranteed by the Constitution and an act; a broad mandate based on 
+                            universal human rights standards. Apart from these powers, the Constitution has also envisaged that the Commission may review the provisions on safeguards 
+                            provided by the Constitution and other prevailing law for the enforcement of human rights and submit necessary recommendations for the effective implementation 
+                            of such provisions.
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>
+                            The Commission propagates human rights education at different levels of society through various seminars, symposia, conferences and also builds consciousness and 
+                            awareness for the protection of human rights. The Commission encourages the functioning and efforts of institutions working in the non-governmental sector. In 
+                            addition, there is a general power to carry out such activities, as the Commission may deem necessary and appropriate for the enforcement, promotion and protection 
+                            of human rights.
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>
+                            The Commission has a broad mandate including civil and political rights, economic, social and cultural rights, and rights of the other groups. Article 249 of the 
+                            Constitution of Nepal, 2015 lays down that the Commission shall perform the following functions, namely:
+                        </p>
+                        <ol id="ol">
+                            <li>
+                                To respect, protect and promote human rights and ensure effective enforcement thereof.
+                            </li>
+                            <li>
+                                Inquire on its own initiative or on petition or complaint lodged in or sent to the Commission and investigate complaints about the violations of human rights 
+                                of an individual or group or abetment thereof, and make recommendation for action against the perpetrators.
+                            </li>
+                            <li>
+                                Recommend to the concerned authority to take departmental action against any official, who fails to fulfill or perform his or her responsibility or duty or shows 
+                                reluctance in preventing violations of human rights.
+                            </li>
+                            <li>
+                                Recommend to file a case in the court in accordance with law against any person or organization who has violated human rights.
+                            </li>
+                            <li>
+                                Coordinate and collaborate with the civil society in order to enhance awareness on human rights.
+                            </li>
+                            <li>
+                                Carry out periodic reviews of the relevant laws relating to human rights and make recommendation to the Government of Nepal for necessary improvements and 
+                                amendments to such laws.
+                            </li>
+                            <li>
+                                Recommend Government of Nepal for the implementation of any international treaty or agreement on human rights, to which Nepal is a party.
+                            </li>
+                            <li>
+                                Publish, in accordance with law, the names of the officials, persons or bodies who have failed to observe or implement any recommendations or directives made or 
+                                given by the Commission in relation to the violations of human rights, and record them as violators of human rights.
+                            </li>
+                        </ol></span> <button onclick="myFunction()" id="myBtn">Read more</button>
+                    </div>
+                    <p id="reference">
+                        *Ref.:<a href="https://www.nhrcnepal.org/" target="_blank">National Human Right Comission - Nepal</a>
+                    </p>
+                </div>
+            </div>
+            <!-- //Human-Rights -->
+            <!-- //header -->
+        </div>
+        <!--//header-->
+
+        <!-- Location -->
+        <div class="address_mail_footer_grids">
+            <iframe src="https://maps.google.com/maps?q=orchid%20international%20college&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+        <!-- //Location -->
+
+        <!-- footer -->
+        <footer class=" py-3" id="contactus">
+            <div class="icons mt-3 text-center">
+                <ul class="d-flex justify-content-center pb-3 social-icons">
+                   <li>
+                      <a href="#">
+                      <span class="fa fa-facebook-f"></span>
+                      </a>
+                   </li>
+                   <li class="mx-3">
+                      <a href="#">
+                      <span class="fa fa-twitter"></span>
+                      </a>
+                   </li>
+                   <li class="mr-3">
+                      <a href="#">
+                      <span class="fa fa-google-plus"></span>
+                      </a>
+                   </li>
+                   <li><a href="#"><span class="fa fa-vk"></span></a></li>
+                </ul>
+            </div>
+            <div class="footer-main txt-center">
+            <p style="text-align: center;"> 
+                © 2020 Summer Project. <a href="{% url 'home' %}">खुशीको श्रीजना | Creation of happiness, Charity</a>
+            </p>
+            </div>
+            <!-- move icon -->
+            <div class="txt-center">
+                <a href="#home" class="move-top txt-center mt-3"></a>
+            </div>
+            <!--//move icon -->
+        </footer>
+        <!--//footer -->
+    </body>
+</html>

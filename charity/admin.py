@@ -11,7 +11,7 @@ admin.site.site_header="Charity | Summer Project- Admin Panel"
 
 #Blog
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ["id", "title", "author", "created_at", "edited_by", "updated_at"]
+    list_display = ["id", "title", "content", "author", "created_at", "edited_by", "updated_at"]
     search_fields = ["title", "author"]
     list_filter = ["author", "created_at"]
     # prepopulated_fields = {"slug": ("title",)}
@@ -19,7 +19,7 @@ class BlogAdmin(admin.ModelAdmin):
 
 # Gallery
 class GalleryAdmin(admin.ModelAdmin):
-    list_display = ["image", "title"]
+    list_display = ["id", "title", "image"]
     # prepopulated_fields = {"slug": ("title",)}
 
 # Volunteer

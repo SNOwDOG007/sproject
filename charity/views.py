@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.views import View
-from charity.models import Volunteer, State
+from charity.models import Volunteer, State, Blog, Gallery
 
 # Create your views here.
 #single_joinus
@@ -29,11 +29,14 @@ def SingleAboutView(request):
 
 #single_blog
 def SingleBlogView(request):
+    blog = Blog.objects.all().order_by('created_at').reverse()
     template_name = "single_blog.html"
-    return render(request, template_name)
+    return render(request, template_name, {'blog':blog})
 
 #single_gallery
 def SingleGalleryView(request):
+    model = Gallery
+    context_object_name = "image"
     template_name = "single_gallery.html"
     return render(request, template_name)
 
@@ -45,5 +48,10 @@ def SingleStateView(request):
     # }
     template_name = "partials/state.html"
     return render(request, template_name, {'state':state})
+
+#single_humanright
+def SingleHumanrightView(request):
+    template_name = "single_humanright.html"
+    return render(request, template_name)
 
     

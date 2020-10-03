@@ -15,7 +15,7 @@ class Blog(models.Model):
     # category = models.ManyToManyField(Category, related_name="news_categoreis")
     author = models.CharField(max_length=255, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    edited_by = models.CharField(max_length=255, null=True)
+    edited_by = models.CharField(max_length=255, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
     cover_image = models.ImageField(upload_to="blog", null=True)
     
@@ -24,11 +24,14 @@ class Blog(models.Model):
     def __str__(self):
         return self.title+" "+str(self.created_at)+" "+str(self.updated_at)
 
-
 #GALLERY
 class Gallery(models.Model):
-    image = models.ImageField(upload_to="gallery", null=True)
     title = models.CharField(max_length=255)
+    image = models.ImageField(upload_to="gallery", null=True)
+    
+    def __str__(self):
+        return self.title
+    
     class Meta:
         verbose_name_plural = "Galleries"
 
