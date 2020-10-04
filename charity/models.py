@@ -14,9 +14,9 @@ class Blog(models.Model):
     slug = models.SlugField(max_length=255, null=True)
     # category = models.ManyToManyField(Category, related_name="news_categoreis")
     author = models.CharField(max_length=255, null=False)
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateField(auto_now_add=True)
     edited_by = models.CharField(max_length=255, blank=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateField(auto_now=True)
     cover_image = models.ImageField(upload_to="blog", null=True)
     
     # def get_absolute_url(self):
@@ -58,6 +58,7 @@ class State(models.Model):
     donation = models.IntegerField()
     volunteers = models.IntegerField()
     rescued = models.IntegerField()
+    updated_at = models.DateField(auto_now=True)
     def __str__(self):
         return str(self.donation)+" "+str(self.volunteers)+" "+str(self.rescued)
 

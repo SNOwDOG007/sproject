@@ -42,11 +42,8 @@ def SingleGalleryView(request):
 
 #single_state
 def SingleStateView(request):
-    state = State.objects.all()
-    # context = {
-    #     'state':state
-    # }
-    template_name = "partials/state.html"
+    state = State.objects.all().order_by('updated_at').reverse()
+    template_name = "state.html"
     return render(request, template_name, {'state':state})
 
 #single_humanright
