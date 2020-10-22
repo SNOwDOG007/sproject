@@ -25,6 +25,7 @@
         <!-- //font-awesome icons -->
         <!--stylesheets-->
         <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
+        <link href="../static/css/gallery.css" rel='stylesheet' type='text/css' media="all">
         <!--//stylesheets-->
         <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
         <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
@@ -84,14 +85,15 @@
             <div class="main-banner">
                 <div class="container">
                     <div class="style-banner ">
-                       <h4 class="mb-1">Better Care and Better World</h4>
-                       <h5>You have a good life,some other don't
-                       </h5>
+                       <h4 class="mb-1">Gallery</h4>
                     </div>
-                    <div class="two-demo-button mt-lg-4 mt-3">
-                       <img src="{{ image.image.url }}" alt="The Beginning" />
-                       <p> This is single Gallery. </p>
-                    </div>
+                    {% for i in images %} 
+                        <div class="gallery-solo">            
+                            <p>{{ i.title }}</p>                
+                            <img src="{{ i.image.url }}" alt="The Beginning" />                            
+                        </div>
+                    {% endfor %} 
+                    
                 </div>
             </div>
             <!-- //banner -->
@@ -120,7 +122,7 @@
                    </li>
                    <li class="mr-3">
                       <a href="#">
-                      <span class="fa fa-google-plus"></span>
+                      <span class="fa fa-google"></span>
                       </a>
                    </li>
                    <li><a href="#"><span class="fa fa-vk"></span></a></li>

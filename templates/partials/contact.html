@@ -8,56 +8,53 @@
     </div>
     <div class="row">
        <div class="col-lg-6 col-md-6 contact-details">
-          <form action="#" method="post">
+          <form action="" method="post">
+             {% csrf_token  %}
              <div class=" form-group contact-forms">
-                <input type="text" class="form-control" placeholder="Name" required="">
+                <input type="text" class="form-control" placeholder="Name" name="name" required="">
              </div>
              <div class="form-group contact-forms">
-                <input type="email" class="form-control" placeholder="Email" required="">
+                <input type="email" class="form-control" placeholder="Email" name="email" required="">
              </div>
              <div class="form-group contact-forms">
-                <input type="text" class="form-control" placeholder="Phone" required=""> 
+                <input type="text" class="form-control" placeholder="Contact" pattern="[0-9]{10}" name="contact" required=""> 
              </div>
              <div class="form-group contact-forms">
-                <textarea class="form-control" placeholder="Message" rows="3" required=""></textarea>
+                <textarea class="form-control" placeholder="Message" rows="3" name="msg" required=""></textarea>
              </div>
-             <button type="submit" class="btn sent-butnn">Send</button>
+             <button type="submit" class="btn sent-butnn">Submit</button>
           </form>
        </div>
        <div class="col-lg-6 col-md-6 address-grid text-center">
-          <div class="contact-address-info mb-md-4 mb-3">
-             <h2><a href="{% url 'home' %}">Funding</a></h2>
-          </div>
           <div class="contact-address-grid mb-3">
              <h4> Address</h4>
           </div>
           <div class=" footer-contact-list mb-2">
-             <p>Melbourne,south Brisbane,<br>QLD 4101,Aurstralia.</p>
+             <p>Jenla, Bhaktapur,<br>Bagmati, Nepal.</p>
           </div>
           <div class=" footer-contact-list mb-2">
-             <p>+ 1 (234) 567 8901</p>
+             <p>+977 (98)61112142</p>
           </div>
           <div class=" footer-contact-list mb-2">
-             <p><a href="mailto:info@example.com">info2@example.com</a></p>
+             <p><a href="mailto:bpin.nakarmi77@gmail.com" style="font-style:italic;">bpin.nakarmi77@gmail.com</a></p>
           </div>
           <div class="icons mt-3 text-center">
             <ul class="d-flex justify-content-center pb-3 social-icons">
                <li>
-                  <a href="#">
+                  <a href="https://www.facebook.com/">
                   <span class="fa fa-facebook-f"></span>
                   </a>
                </li>
                <li class="mx-3">
-                  <a href="#">
+                  <a href="https://www.twitter.com/">
                   <span class="fa fa-twitter"></span>
                   </a>
                </li>
                <li class="mr-3">
-                  <a href="#">
-                  <span class="fa fa-google-plus"></span>
+                  <a href="https://www.google.com/">
+                  <span class="fa fa-google"></span>
                   </a>
                </li>
-               <li><a href="#"><span class="fa fa-vk"></span></a></li>
             </ul>
           </div>
          </div>

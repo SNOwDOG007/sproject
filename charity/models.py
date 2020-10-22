@@ -11,12 +11,12 @@ class Blog(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     count = models.IntegerField(default=0)
-    slug = models.SlugField(max_length=255, null=True)
+    # slug = models.SlugField(max_length=255, null=True)
     # category = models.ManyToManyField(Category, related_name="news_categoreis")
     author = models.CharField(max_length=255, null=False)
-    created_at = models.DateField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     edited_by = models.CharField(max_length=255, blank=True)
-    updated_at = models.DateField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
     cover_image = models.ImageField(upload_to="blog", null=True)
     
     # def get_absolute_url(self):
@@ -44,7 +44,8 @@ class Volunteer(models.Model):
     name = models.CharField(max_length=255)    
     address = models.CharField(max_length=100, null=True)
     gender = models.CharField(max_length=12, choices=g, null=True)
-    email = models.CharField(max_length=100, null=True)
+    email_regex = RegexValidator(regex=r'^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', message="Email must be entered in the format: 'example@example.com'")
+    email = models.CharField(validators=[email_regex], max_length=100, null=True)
     phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
     contact = models.CharField(validators=[phone_regex], max_length=10, null=True)
     joined_from = models.DateTimeField(auto_now_add=True)
@@ -62,3 +63,15 @@ class State(models.Model):
     def __str__(self):
         return str(self.donation)+" "+str(self.volunteers)+" "+str(self.rescued)
 
+#CONTACTUS
+class ContactUs(models.Model):
+    name = models.CharField(max_length=255)    
+    email_regex = RegexValidator(regex=r'^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', message="Email must be entered in the format: 'example@example.com'")
+    email = models.CharField(validators=[email_regex], max_length=100, null=True)
+    phone_regex = RegexValidator(regex=r'^\d{10}$', message="Phone number must be entered in the format: '98********'. Up to 10 digits allowed.")
+    contact = models.CharField(validators=[phone_regex], max_length=10, null=True)
+    submitted_at = models.DateField(auto_now_add=True)
+    message = models.CharField(max_length=755)    
+
+    def __str__(self):
+        return self.name+" "+self.email+" "+self.contact+" "+str(self.submitted_at)+" "+self.message

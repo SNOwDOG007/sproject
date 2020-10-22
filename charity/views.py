@@ -35,15 +35,14 @@ def SingleBlogView(request):
 
 #single_gallery
 def SingleGalleryView(request):
-    model = Gallery
-    context_object_name = "image"
+    gallery = Gallery.objects.all().order_by('id').reverse()
     template_name = "single_gallery.html"
-    return render(request, template_name)
+    return render(request, template_name, {'images' : gallery})
 
 #single_state
 def SingleStateView(request):
-    state = State.objects.all().order_by('updated_at').reverse()
-    template_name = "state.html"
+    state = State.objects.all()
+    template_name = "partials/state.html"
     return render(request, template_name, {'state':state})
 
 #single_humanright
@@ -51,4 +50,19 @@ def SingleHumanrightView(request):
     template_name = "single_humanright.html"
     return render(request, template_name)
 
-    
+#contact_us
+def ContactUsView(request):
+    template_name = "partials/contact.html"
+    if request.method=="POST":        
+        name = request.POST["name"]
+        mail = request.POST["email"]
+        contact = request.POST["contact"]
+        msg = request.POST["msg"]
+
+        data = ContactUs(name=name,email=mail,contact=contact,message=msg)
+        data.save()
+        res = "Dear {} Thankyou for supporting us.".format(name)
+        return render(request,template_name,{"status":res})
+        # return HttpResponse
+
+    return render(request, template_name)

@@ -1,0 +1,29 @@
+.style-banner {
+    text-align: center;
+    padding-top: 11em;    
+}
+.content {
+    background-color: rgba(0, 179, 129, 0.7);
+    margin-top: 5px;
+    color: #ffffff;
+    display: block;
+}
+
+.cover_image img {
+    width: 100%;
+}
+
+.blog_title {
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.created_at, .author{
+    font-style: italic;
+}
+
+a {
+    color: #000000;
+}
+
+

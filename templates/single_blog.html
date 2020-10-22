@@ -25,6 +25,7 @@
         <!-- //font-awesome icons -->
         <!--stylesheets-->
         <link href="../static/css/style.css" rel='stylesheet' type='text/css' media="all">
+        <link href="../static/css/blog.css" rel='stylesheet' type='text/css' media="all">
         <!--//stylesheets-->
         <link rel="icon" href="../static/images/title.png" type="images/jpg" sizes="12x12">
         <link href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700" rel="stylesheet">
@@ -84,16 +85,32 @@
             <div class="main-banner">
                 <div class="container">
                     <div class="style-banner ">
-                       <h4 class="mb-1">Better Care and Better World</h4>
-                       <h5>You have a good life,some other don't        {% for i in blog %}   
-                        {{i.title}} 
-                        {{i.author}}
-                        {{i.content}}
-                        {% endfor %}
-                       </h5>
-                    </div>
-                    <div class="two-demo-button mt-lg-4 mt-3">
-                       <p> This is single blog. </p>
+                       <h4 class="mb-1">Blogs</h4>                       
+                        {% for i in blog %}  
+                        <div class="content">   
+                            <div class="cover_image">
+                                <img src="{{ i.cover_image.url }}" alt="The Beginning" />
+                            </div>                         
+                            <p>                               
+                                <div>
+                                    <span class="blog_title">{{i.title}}</span>
+                                </div>
+                                <div>
+                                    <span class="created_at">{{i.created_at}}</span>                                    
+                                </div>                        
+                                <div class="content_1">
+                                    {{i.content|truncatechars:55}}
+                                    <a href="#">Read more</a>
+                                </div>
+                                <div>
+                                    <span class="author">-{{i.author}}</span>
+                                </div>
+                            </p>
+                        </div>                        
+                        <!-- <div>
+                            ----------------
+                        </div>                         -->
+                        {% endfor %}                       
                     </div>
                 </div>
             </div>
@@ -122,7 +139,7 @@
                    </li>
                    <li class="mr-3">
                       <a href="#">
-                      <span class="fa fa-google-plus"></span>
+                      <span class="fa fa-google"></span>
                       </a>
                    </li>
                    <li><a href="#"><span class="fa fa-vk"></span></a></li>

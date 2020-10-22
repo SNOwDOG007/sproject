@@ -1,5 +1,5 @@
 from django.contrib import admin
-from charity.models import Blog, Gallery, Volunteer, State
+from charity.models import Blog, Gallery, Volunteer, State, ContactUs
 
 # Register your models here.
 # @admin.register(Blog)
@@ -11,7 +11,7 @@ admin.site.site_header="Charity | Summer Project- Admin Panel"
 
 #Blog
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ["id", "title", "content", "author", "created_at", "edited_by", "updated_at"]
+    list_display = ["id", "title", "cover_image", "author", "created_at", "edited_by", "updated_at"]
     search_fields = ["title", "author"]
     list_filter = ["author", "created_at"]
     # prepopulated_fields = {"slug": ("title",)}
@@ -33,8 +33,14 @@ class VolunteerAdmin(admin.ModelAdmin):
 class StateAdmin(admin.ModelAdmin):
     list_display = ["id", "donation", "volunteers", "rescued"]
 
+# ContactUs
+class ContactUsAdmin(admin.ModelAdmin):
+    list_display = ["id", "name", "email", "contact", "submitted_at"]
+    search_fields = ["name", "email"]
+    list_filter = ["submitted_at"]
 
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(Gallery, GalleryAdmin)
 admin.site.register(Volunteer, VolunteerAdmin)
 admin.site.register(State, StateAdmin)
+admin.site.register(ContactUs, ContactUsAdmin)
